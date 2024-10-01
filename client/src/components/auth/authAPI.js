@@ -17,7 +17,7 @@ import {
 } from "./authSlice";
 import { getStoriesByUser } from "../story/storyAPI";
 
-axios.defaults.baseURL = import.meta.env.VITE_APP_API_URL;
+axios.defaults.baseURL = "https://akash22992000-gmail-com-cuvette-final-evaluation-feb244-backend.vercel.app";
 
 
 axios.defaults.withCredentials = true;

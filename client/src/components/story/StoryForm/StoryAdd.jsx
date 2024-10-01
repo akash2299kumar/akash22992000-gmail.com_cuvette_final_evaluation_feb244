@@ -77,8 +77,6 @@ const StoryForm = () => {
   };
 
   const handleSubmit = async () => {
- 
-    const { VITE_APP_API_URL } = import.meta.env;
 
     try {
       // Check validation in the slides
@@ -117,7 +115,7 @@ const StoryForm = () => {
       dispatch(createStoryRequest());
 
       const response = await axios
-        .post(`${VITE_APP_API_URL}/api/story/create`, {
+        .post(`${"https://akash22992000-gmail-com-cuvette-final-evaluation-feb244-backend.vercel.app"}/api/story/create`, {
           slides,
           addedBy: user,
         })

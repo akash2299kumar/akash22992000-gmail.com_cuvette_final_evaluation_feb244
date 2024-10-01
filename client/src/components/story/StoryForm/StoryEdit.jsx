@@ -53,7 +53,6 @@ const StoryForm = () => {
   };
 
   const handleSubmit = async () => {
-    const { VITE_APP_API_URL } = import.meta.env;
 
     try {
       // FORM VALIDATION STARTS HERE
@@ -91,7 +90,7 @@ const StoryForm = () => {
       // FORM VALIDATION ENDS HERE
 
       const response = await axios
-        .put(`${VITE_APP_API_URL}/api/story/update/${story._id}`, {
+        .put(`${"https://akash22992000-gmail-com-cuvette-final-evaluation-feb244-backend.vercel.app"}/api/story/update/${story._id}`, {
           slides,
           addedBy: user,
         })
