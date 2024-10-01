@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 
 const corsOptions = {
   credentials: true,
-  origin: "http://localhost:5173", 
+  origin: "https://akash22992000-gmail-com-cuvette-final-evaluation-it1ih1m3q.vercel.app/", 
 };
 app.use(cors(corsOptions));
 
