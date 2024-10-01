@@ -25,11 +25,23 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 //   origin: "https://akash22992000-gmail-com-cuvette-final-evaluation-it1ih1m3q.vercel.app/", 
 // };
 // app.use(cors(corsOptions));
-app.use(cors({
-  origin: '*', // This will allow any origin, but be cautious with this in production
-  credentials: true,
-}));
 
+const allowedOrigins = [
+  'https://akash22992000-gmail-com-cuvette-final-evaluation-feb244-backend.vercel.app',
+  'https://akash22992000-gmail-com-cuvette-final-evaluation-cb1g6uqed.vercel.app',
+  // Add any other allowed origins here
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, // This allows the server to accept cookies or other credentials
+}));
 
 
 app.use(cookieParser());
