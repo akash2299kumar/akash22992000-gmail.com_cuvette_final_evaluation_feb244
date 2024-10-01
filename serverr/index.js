@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 
 const allowedOrigins = [
   'https://akash22992000-gmail-com-cuvette-final-evaluation-feb244-backend.vercel.app',
-  'https://akash22992000-gmail-com-cuvette-final-evaluation-cb1g6uqed.vercel.app',
+  'https://akash22992000-gmail-com-cuvette-final-evaluation-n2x4o34oc.vercel.app',
   // Add any other allowed origins here
 ];
 
