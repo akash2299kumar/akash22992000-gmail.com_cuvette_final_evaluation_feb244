@@ -20,11 +20,15 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
-const corsOptions = {
+// const corsOptions = {
+//   credentials: true,
+//   origin: "https://akash22992000-gmail-com-cuvette-final-evaluation-it1ih1m3q.vercel.app/", 
+// };
+// app.use(cors(corsOptions));
+app.use(cors({
+  origin: '*', // This will allow any origin, but be cautious with this in production
   credentials: true,
-  origin: "https://akash22992000-gmail-com-cuvette-final-evaluation-it1ih1m3q.vercel.app/", 
-};
-app.use(cors(corsOptions));
+}));
 
 
 
