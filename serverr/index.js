@@ -26,28 +26,23 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 // };
 // app.use(cors(corsOptions));
 
-// const allowedOrigins = [
-//   'https://akash22992000-gmail-com-cuvette-final-evaluation-feb244-backend.vercel.app',
-//   'https://akash22992000-gmail-com-cuvette-final-evaluation-n2x4o34oc.vercel.app',
-//   // Add any other allowed origins here
-// ];
+const allowedOrigins = [
+  'https://akash22992000-gmail-com-cuvette-final-evaluation-feb244-backend.vercel.app',
+  'https://akash22992000-gmail-com-cuvette-final-evaluation-n2x4o34oc.vercel.app',
+  // Add any other allowed origins here
+];
 
-// app.use(cors({
-//   origin: function (origin, callback) {
-//     if (!origin || allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   },
-//   credentials: true, // This allows the server to accept cookies or other credentials
-// }));
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, // This allows the server to accept cookies or other credentials
+}));
 
-const corsOptions = {
-  credentials: true,
-  origin: "*",
-};
-app.use(cors(corsOptions));
 
 app.use(cookieParser());
 app.use(bodyParser.json());
