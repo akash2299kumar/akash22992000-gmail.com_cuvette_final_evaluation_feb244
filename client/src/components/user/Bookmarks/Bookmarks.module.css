@@ -1,0 +1,56 @@
+.storiesContainer{
+    margin: 1rem;
+    
+    }
+    .heading{
+        margin-top: 2rem;
+        text-align: center;
+    
+    
+    }
+    .bookmarks{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        place-items: center;
+        justify-content: space-around;
+    }
+
+    .no_bookmarks{
+        position: absolute;
+        top: 10rem;
+        text-align: center;
+        background: #73abff;
+        color: #ffff;
+        padding: 0.8rem;
+        margin: 1rem;
+        border-radius: 1rem;
+        font-size: 1rem;
+          
+    }
+    .no_bookmark_heading{
+        font-size: 1.5rem;
+        margin-bottom: 1.3rem;
+
+    }
+
+    @media screen and (max-width: 768px) {
+        .heading{
+            font-size: 1.5rem;
+           
+        }
+        .bookmarks{
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+            justify-content: center;
+        }
+        .no_bookmarks{
+            position: static;
+        }
+        .no_bookmark_heading{
+          margin-bottom: 0.3rem;
+            
+        }
+    }
+        
+    
