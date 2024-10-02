@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 //   credentials: true, // This allows the server to accept cookies or other credentials
 // }));
 
-const frontendURL = 'https://akash22992000-gmail-com-cuvette-final-evaluation-n2x4o34oc.vercel.app';
+const frontendURL = 'https://akash22992000-gmail-com-cuvette-final-evaluation-lwyx15v3c.vercel.app/';
 
 app.use(cors({
   origin: frontendURL,
